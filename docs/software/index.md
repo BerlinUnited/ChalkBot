@@ -1,3 +1,0 @@
-# Software
-
-Chalkbot Software
