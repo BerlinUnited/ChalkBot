@@ -6,7 +6,8 @@ nav:
     - 'hardware/index.md'
   - Software:
     - 'software/index.md'
-
+  - ChalkBot Team:
+    - 'raspberrypi.md'
 theme:
   name: material
   favicon: img/favicon.ico
