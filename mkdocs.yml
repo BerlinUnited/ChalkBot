@@ -8,6 +8,8 @@ nav:
     - 'software/index.md'
   - ChalkBot Team:
     - 'raspberrypi.md'
+    - 'raspconfiguration.md'
+    
 theme:
   name: material
   favicon: img/favicon.ico
@@ -37,6 +39,7 @@ theme:
 
 markdown_extensions:
   - attr_list
+  - md_in_html
   - admonition
   - pymdownx.tabbed
   - pymdownx.details

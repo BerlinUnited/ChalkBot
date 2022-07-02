@@ -24,3 +24,4 @@ Button betätigt.
 
 ![Raspberry Pi Imager](img/chalkbot_raspi/2022-06-18_20-30-20.png)
 
+Damit sind wir mit dem initialen Setup von Raspberry Pi.
