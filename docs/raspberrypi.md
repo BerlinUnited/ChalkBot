@@ -3,25 +3,22 @@ Raspberry Pi
 
 # Setup step-by-step
 
-Dieses Dokument gibt uns die Übersicht, wie man einen Setup von ***Raspberry Pi*** machen soll. Dafür
-braucht man folgende Tools wie Micro HDMI Kabel, USB-Tastatur & Maus, SD-Card (für RaspberryPi Zero
-bis zum 256 GB), LAN-Kabel für die Ethernet Verbindung. Die erwähnten Tools sind kein Muss, sondern 
-ein optimaler Satz für die initiale Konfiguration von dem RaspberryPi.
+This document gives us a quick overview how to setup ***Raspberry Pi***. For this you need the following tools such as Micro HDMI cable, USB keyboard & mouse, SD card (for RaspberryPi Zero up to 256 GB), LAN cable for the Ethernet connection. The tools mentioned are not a must, but an optimal set for the initial configuration of the RaspberryPi.
 
-### Installation von RaspberryPi OS
-Zunächst muss man RaspberryPi Imager unter folgendem [Link](https://www.raspberrypi.com/software/)
-herunterladen. 
+### Installation of RaspberryPi OS
+First of all, one has to install RaspberryPi Imager using the following [link](https://www.raspberrypi.com/software/).
+ 
 ![Raspberry Pi Imager](img/chalkbot_raspi/2022-06-18_20-28-01.png)
+*Images were taken from [www.raspberrypi.org](https://www.raspberrypi.org/)*
 
-Die aktuelle Version des Betriebssystems sollte danach über "Choose button"-Schaltfläche ausgewählt 
-werden. Da sehen wir mehrere Möglichkeiten, die optimale Auswahl wäre ggf. RaspberryPi OS(32 GB).
+The current version of the operating system should then be selected using the "Choose button" button. We see several possibilities, the optimal choice would be RaspberryPi OS (32 GB).
 
 ![Raspberry Pi Imager](img/chalkbot_raspi/2022-06-18_20-28-28.png)
+*Images were taken from [www.raspberrypi.org](https://www.raspberrypi.org/)*
 
-Als nächstes muss man SD-Card mit dem Card Reader verbinden, und diese in dem Image Programm als 
-Speichermedium auswählen. Danach muss man mit dem eigentlichen Flashen beginnen nach dem man "Write"-
-Button betätigt.
+Next you have to connect the SD card to the card reader and select it as a storage medium in the image program. Then you have to start with the actual flashing after pressing the "Write" button.
 
 ![Raspberry Pi Imager](img/chalkbot_raspi/2022-06-18_20-30-20.png)
+*Images were taken from [www.raspberrypi.org](https://www.raspberrypi.org/)*
 
 Damit sind wir mit dem initialen Setup von Raspberry Pi.
