@@ -13,7 +13,7 @@
     
     
       
-        <title>Software - ChalkBot - Documentation</title>
+        <title>Raspberry Pi - ChalkBot - Documentation</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#software" class="md-skip">
+        <a href="#raspberry-pi" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Software
+              Raspberry Pi
             
           </span>
         </div>
@@ -206,15 +206,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../software/" class="md-tabs__link">
         Software
       </a>
     </li>
@@ -224,13 +222,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../Raspberry%20Pi/" class="md-tabs__link">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
         ChalkBot Team
       </a>
     </li>
@@ -376,14 +376,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       
       
@@ -404,52 +402,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Software
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../software/" class="md-nav__link">
         Software
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#test-leon" class="md-nav__link">
-    Test Leon
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -467,12 +424,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
       
@@ -493,11 +452,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../Raspberry%20Pi/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Raspberry Pi
       </a>
+      
     </li>
   
 
@@ -543,21 +512,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#test-leon" class="md-nav__link">
-    Test Leon
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -570,9 +524,20 @@
                 
 
 
-<h1 id="software">Software</h1>
-<p>Chalkbot Software</p>
-<h2 id="test-leon">Test Leon</h2>
+<h1 id="raspberry-pi">Raspberry Pi</h1>
+<h1 id="setup-step-by-step">Setup step-by-step</h1>
+<p>This document gives us a quick overview how to setup <strong><em>Raspberry Pi</em></strong>. For this you need the following tools such as Micro HDMI cable, USB keyboard &amp; mouse, SD card (for RaspberryPi Zero up to 256 GB), LAN cable for the Ethernet connection. The tools mentioned are not a must, but an optimal set for the initial configuration of the RaspberryPi.</p>
+<h3 id="installation-of-raspberrypi-os">Installation of RaspberryPi OS</h3>
+<p>First of all, one has to install RaspberryPi Imager using the following <a href="https://www.raspberrypi.com/software/">link</a>.</p>
+<p><img alt="Raspberry Pi Imager" src="../img/chalkbot_raspi/2022-06-18_20-28-01.png" /></p>
+<p><em>Images were taken from <a href="https://www.raspberrypi.org/">www.raspberrypi.org</a></em></p>
+<p>The current version of the operating system should then be selected using the "Choose button" button. We see several possibilities, the optimal choice would be RaspberryPi OS (32 GB).</p>
+<p><img alt="Raspberry Pi Imager" src="../img/chalkbot_raspi/2022-06-18_20-28-28.png" />
+<em>Images were taken from <a href="https://www.raspberrypi.org/">www.raspberrypi.org</a></em></p>
+<p>Next you have to connect the SD card to the card reader and select it as a storage medium in the image program. Then you have to start with the actual flashing after pressing the "Write" button.</p>
+<p><img alt="Raspberry Pi Imager" src="../img/chalkbot_raspi/2022-06-18_20-30-20.png" />
+<em>Images were taken from <a href="https://www.raspberrypi.org/">www.raspberrypi.org</a></em></p>
+<p>This brings us to the initial setup of the Raspberry Pi.</p>
 
               
             </article>

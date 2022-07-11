@@ -13,7 +13,7 @@
     
     
       
-        <title>Software - ChalkBot - Documentation</title>
+        <title>Raspberry Pi configuration - ChalkBot - Documentation</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#software" class="md-skip">
+        <a href="#configuration-raspberry-pi" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Software
+              Raspberry Pi configuration
             
           </span>
         </div>
@@ -206,15 +206,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../software/" class="md-tabs__link">
         Software
       </a>
     </li>
@@ -224,13 +222,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../Raspberry%20Pi/" class="md-tabs__link">
+      <a href="../Raspberry%20Pi/" class="md-tabs__link md-tabs__link--active">
         ChalkBot Team
       </a>
     </li>
@@ -376,14 +376,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       
       
@@ -404,52 +402,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Software
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../software/" class="md-nav__link">
         Software
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#test-leon" class="md-nav__link">
-    Test Leon
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -467,12 +424,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
       
@@ -507,11 +466,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../Raspberry%20Pi%20configuration/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Raspberry Pi configuration
       </a>
+      
     </li>
   
 
@@ -543,21 +512,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#test-leon" class="md-nav__link">
-    Test Leon
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -570,9 +524,30 @@
                 
 
 
-<h1 id="software">Software</h1>
-<p>Chalkbot Software</p>
-<h2 id="test-leon">Test Leon</h2>
+<h1 id="configuration-raspberry-pi">Configuration Raspberry Pi</h1>
+<h1 id="ssh-connection">SSH Connection</h1>
+<h2 id="configuration-using-command-line">Configuration using command line:</h2>
+<p>To open the configuration tool on a Raspberry Pi, enter the following command line in the command prompt:</p>
+<pre><code class="language-bash">$ sudo raspi config
+</code></pre>
+<p>Scroll up and down using tab-key and arrows, navigate <em>SSH</em> then <em>YES</em>, then <em>OK</em> then 
+click <em>Finish</em>.</p>
+<h2 id="configuration-using-desktop">Configuration using desktop:</h2>
+<p>Go to menu <em>Preferences</em>, choosing <em>Raspberry Pi configuration</em>. Then the corresponding GUI opens with setting options, you should select SSH via interface options and release the corresponding option.</p>
+<p><img alt="Raspberry Pi Configuration Tool" src="../img/chalkbot_raspi/2022-06-18_21-03-52.png" />
+<em>Images were taken from <a href="https://www.raspberrypi.org/">www.raspberrypi.org</a></em></p>
+<h2 id="configuration-using-systemctl">Configuration using systemctl:</h2>
+<pre><code class="language-bash">$ sudo systemctl enable ssh
+</code></pre>
+<pre><code class="language-bash">$ sudo systemctl start ssh
+</code></pre>
+<div class="admonition note annotate">
+<p class="admonition-title">IP-address of Rapsberry Pi</p>
+<p>You'll need to write down your Raspberry Pi's IP address to connect to it later. The ifconfig command displays information about the current network status, including the IP address, or you can use hostname -I to display the IP addresses associated with the device.</p>
+</div>
+<p>For connection with the <em>Raspberry Pi</em> you need to type in the following:</p>
+<pre><code class="language-bash">$ sudo pi@&lt;IP&gt;
+</code></pre>
 
               
             </article>

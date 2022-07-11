@@ -13,7 +13,7 @@
     
     
       
-        <title>Software - ChalkBot - Documentation</title>
+        <title>PS2 controls through Arduino - Hardware Side - ChalkBot - Documentation</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#software" class="md-skip">
+        <a href="#ps2-controls-through-arduino-hardware-side" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Software
+              PS2 controls through Arduino - Hardware Side
             
           </span>
         </div>
@@ -206,15 +206,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../software/" class="md-tabs__link">
         Software
       </a>
     </li>
@@ -376,14 +374,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       
       
@@ -404,52 +400,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Software
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../software/" class="md-nav__link">
         Software
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#test-leon" class="md-nav__link">
-    Test Leon
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -543,21 +498,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#test-leon" class="md-nav__link">
-    Test Leon
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -570,9 +510,20 @@
                 
 
 
-<h1 id="software">Software</h1>
-<p>Chalkbot Software</p>
-<h2 id="test-leon">Test Leon</h2>
+<h1 id="ps2-controls-through-arduino-hardware-side">PS2 controls through Arduino - Hardware Side</h1>
+<p>Below is a detailed documentation of the hardware components used to enable PS2 controls of the ChalkBot. </p>
+<p>This information is subject to change, for example, Arduino Mega will eventually replaced by the lighter Arduino Nano, etc.</p>
+<h1 id="the-controller">The controller</h1>
+<p><img alt="PS2 Controller" src="https://m.media-amazon.com/images/I/61X1rlukjdL._AC_SL1200_.jpg" /></p>
+<p>This project uses Blue Lake Performance Wireless PS2 Controller. The receiver component can connect to the target device through USB or classic PS2 pins.</p>
+<h2 id="controller-connection-to-arduino-mega">Controller connection to Arduino Mega</h2>
+<p>Jumper wires have been used to connect the pins on PS2 receiver to the Arduino Mega:</p>
+<p><img alt="Arduino Mapping" src="https://hackster.imgix.net/uploads/attachments/890339/untitled-2_CM3WtxTySI.jpg?auto=compress,format&amp;w=1280&amp;h=960&amp;fit=max" /></p>
+<p>The receiver is fully powered through Arduino Mega through the corresponding pin, but this will not be possible in the later stages of the project, since Arduino Nano is unable to power up the receiver.</p>
+<p>Below is a visual breakdown of the receiver pins for the PS2 controller:</p>
+<p><img alt="PS2 Pins" src="https://hackster.imgix.net/uploads/attachments/890338/ps2_controller-2_zdnilnV0Ci.jpg?auto=compress,format&amp;w=1280&amp;h=960&amp;fit=max" /></p>
+<h2 id="arduino-mega-connection-to-pc">Arduino Mega connection to PC</h2>
+<p>Arduino Mega is connected to the PC through the USB port, which serves to power it up, as well as enable the serial input received by the Arduino to be read on the PC.</p>
 
               
             </article>
