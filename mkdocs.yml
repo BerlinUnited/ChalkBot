@@ -7,8 +7,8 @@ nav:
   - Software:
     - 'software/index.md'
   - ChalkBot Team:
-    - 'raspberrypi.md'
-    - 'raspconfiguration.md'
+    - 'Raspberry Pi.md'
+    - 'Raspberry Pi configuration.md'
     
 theme:
   name: material

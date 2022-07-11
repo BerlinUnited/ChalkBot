@@ -9,6 +9,7 @@ This document gives us a quick overview how to setup ***Raspberry Pi***. For thi
 First of all, one has to install RaspberryPi Imager using the following [link](https://www.raspberrypi.com/software/).
  
 ![Raspberry Pi Imager](img/chalkbot_raspi/2022-06-18_20-28-01.png)
+
 *Images were taken from [www.raspberrypi.org](https://www.raspberrypi.org/)*
 
 The current version of the operating system should then be selected using the "Choose button" button. We see several possibilities, the optimal choice would be RaspberryPi OS (32 GB).
@@ -21,4 +22,4 @@ Next you have to connect the SD card to the card reader and select it as a stora
 ![Raspberry Pi Imager](img/chalkbot_raspi/2022-06-18_20-30-20.png)
 *Images were taken from [www.raspberrypi.org](https://www.raspberrypi.org/)*
 
-Damit sind wir mit dem initialen Setup von Raspberry Pi.
+This brings us to the initial setup of the Raspberry Pi.
