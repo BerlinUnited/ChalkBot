@@ -7,7 +7,7 @@ The Arduino sketch allows the Arduino to read the inputs that the PS2 Controller
 
 ## The Python Program
 
-The python portion of the PS2 Controls is currently a part of the already previously existing python program - *chalkbot_cmd*. The commandline keyword to call it up is aptly named - *ps2controls*.
+The python program "ps2_control.py" responsible for receiving the input and sending it to the Chalkbot itself, or the simulator.
 
 The serial library is imported, since it allows us to receive serial input. The serial instance - *serialInst* stores the serial data. This data is later read line by line as a part of the while loop.
 
