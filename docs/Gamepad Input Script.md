@@ -1,15 +1,42 @@
-Configuration Raspberry Pi 
+Gamepad Input Script
 ============
 
-# SSH Connection
+## Inputs Python Library
 
-## Configuration using command line:
+As a basis for developing our application, we use the ***Inputs Python Library***. The reason was the incredible flexibility and wide range of possibilities of this resource and a good feedback about the work from the community. All necessary information about the library can be pulled out of the following pages:
 
-To open the configuration tool on a Raspberry Pi, enter the following command line in the command prompt:
+- [github/inputs](https://github.com/zeth/inputs)
+
+- [zeth/inputs](https://inputs.readthedocs.io/en/latest/)
+
+There are several reasons for using exactly this library:
+
+- The Inputs module provides Python programs with an easy way to listen for user input.
+- Currently supported platforms are Linux (including Raspberry Pi and Chromebooks in developer mode), Windows and the Apple Mac.
+- Supported Python versions are all versions of Python 3 and Python 2.7
+- Inputs is in pure Python and there are no Raspberry Pi, Linux or Windows dependencies.
+
+It is also very useful when the device needs to run a particular application in full screen mode, but you would like to listen in the background for a certain set of user data, e.g. to bring up the admin panel in digital signage settings. But the most suffcient feature of the Iputs module is taht it is cross-platform, so it doesn't matter which you use, the event data will be normalized and your program will work the same on the other operating system.
+
+
+![Gamepad with Dongle](img/chalkbot_raspi/gamepaddongle.jpeg)
+
+## Installation
+
 
 ```bash
-$ sudo raspi config
+$ pip install inputs
 ```
+or directly from source
+
+
+```bash
+$ git clone https://github.com/zeth/inputs.git
+$ cd inputs
+$ python setup.py install
+```
+
+
 Scroll up and down using tab-key and arrows, navigate *SSH* then *YES*, then *OK* then 
 click *Finish*.
 
@@ -17,7 +44,6 @@ click *Finish*.
 
 Go to menu *Preferences*, choosing *Raspberry Pi configuration*. Then the corresponding GUI opens with setting options, you should select SSH via interface options and release the corresponding option.
 
-![Raspberry Pi Configuration Tool](img/chalkbot_raspi/2022-06-18_21-03-52.png)
 *Images were taken from [www.raspberrypi.org](https://www.raspberrypi.org/)*
 
 ## Configuration using systemctl:

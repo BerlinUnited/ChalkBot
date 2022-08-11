@@ -9,6 +9,8 @@ nav:
   - ChalkBot Team:
     - 'Raspberry Pi.md'
     - 'Raspberry Pi configuration.md'
+    - 'Diet Pi.md'
+    - 'Gamepad Input Script.md'
     
 theme:
   name: material
