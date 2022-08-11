@@ -1,11 +1,21 @@
-Gamepad Input Script
+Problems & Solving
 ============
 
-## Inputs Python Library
+## Outline
 
-As a basis for developing our application, we use the ***Inputs Python Library***. The reason was the incredible flexibility and wide range of possibilities of this resource and a good feedback about the work from the community. All necessary information about the library can be pulled out of the following pages:
+As in any work, in ours everything was not entirely smooth and at times there were problems of various kinds that required a timely solution. At the same time, decisions should be within the clearly defined framework of the project itself, as well as respect for the competent allocation of resources.
 
-- [github/inputs](https://github.com/zeth/inputs)
+All problems can be divided into the following three groups:
+
+- SSH
+- Git
+- WiFi
+
+### SSH
+
+During the project we came across the error message while connecting the device over SSH, which was at some point a bit frustrative, since we couldn't figure out, what the error was caused. After several times of debugging, "stackoverlow"-ing and googling on different community forums, we found a way to solve the issue.There are actually three ways of solving the ssh error issue - desktop configuration, terminal configuration and *systemctl*
+
+[github/inputs](https://github.com/zeth/inputs)
 
 - [zeth/inputs](https://inputs.readthedocs.io/en/latest/)
 
