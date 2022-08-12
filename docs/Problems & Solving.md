@@ -68,16 +68,22 @@ The solution was revealed after some help from the team leader and that was asso
 ### WiFi Issues
 
 There was also some problem with Raspberry Pi Zero WiFi, it was exceptionally poor when the device was moved. The problem had also the backdraw of using HTTP to communicate with ESP. Even if TCP connection is reused, one request takes 7 TCP packets, which means 70 packets per second. 
-However, on the ChalkBot with the ESP, the connection seems quite stable
-But should be best replaced with a wired connection.
+
+However, on the ChalkBot with the ESP, the connection seems quite stable, but should be best replaced with a wired connection.
+
+We have investigated this particular isuue in a detailed manner and for that purpose we've measure the transfer rate between the Rasperry Pi and the computer.
+
+![Error Message Git](img/chalkbot_raspi/transferrate.png)
 
 
+Interval is 0.1 s, so a total of 10 seconds, so the one can observe clearly to see where the Raspberry Pi is moving.
 
 
+## Outlook
 
-
-
-
-
-
+- Switching ESP HTTP Server to support subsequently persistent connection
+- Change communication protocol
+- Avoid TCP connection, as there is too much overhead and FlowControl is undesirable (UDP e.g)
+- This automatically eliminates HTTP
+- Change config on the fly
 
