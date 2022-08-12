@@ -13,7 +13,7 @@
     
     
       
-        <title>Raspberry Pi configuration - ChalkBot - Documentation</title>
+        <title>Problems & Solving - ChalkBot - Documentation</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#configuration-raspberry-pi" class="md-skip">
+        <a href="#problems-solving" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Raspberry Pi configuration
+              Problems & Solving
             
           </span>
         </div>
@@ -466,21 +466,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Raspberry%20Pi%20configuration/" class="md-nav__link">
         Raspberry Pi configuration
       </a>
-      
     </li>
   
 
@@ -518,11 +508,86 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../Problems%20%26%20Solving/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Problems & Solving
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Problems & Solving
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#outline" class="md-nav__link">
+    Outline
+  </a>
+  
+    <nav class="md-nav" aria-label="Outline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    SSH
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    Git
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wifi-issues" class="md-nav__link">
+    WiFi Issues
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outlook" class="md-nav__link">
+    Outlook
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -554,6 +619,55 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#outline" class="md-nav__link">
+    Outline
+  </a>
+  
+    <nav class="md-nav" aria-label="Outline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    SSH
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    Git
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wifi-issues" class="md-nav__link">
+    WiFi Issues
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outlook" class="md-nav__link">
+    Outlook
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -566,54 +680,56 @@
                 
 
 
-<h1 id="configuration-raspberry-pi">Configuration Raspberry Pi</h1>
-<h1 id="ssh-connection">SSH Connection</h1>
-<h2 id="configuration-using-command-line">Configuration using command line:</h2>
-<p>To open the configuration tool on a Raspberry Pi, enter the following command line in the command prompt:</p>
+<h1 id="problems-solving">Problems &amp; Solving</h1>
+<h2 id="outline">Outline</h2>
+<p>As in any work, in ours everything was not entirely smooth and at times there were problems of various kinds that required a timely solution. At the same time, decisions should be within the clearly defined framework of the project itself, as well as respect for the competent allocation of resources.</p>
+<p>All problems can be divided into the following three groups:</p>
+<ul>
+<li>SSH</li>
+<li>Git</li>
+<li>WiFi</li>
+</ul>
+<h3 id="ssh">SSH</h3>
+<p>During the project we came across the error message while connecting the device over SSH, which was at some point a bit frustrative, since we couldn't figure out, what the error was caused. After several times of debugging, "stackoverlow"-ing and googling on different community forums, we found a way to solve the issue.There are actually three ways of solving the ssh error issue - desktop configuration, terminal configuration and <em>systemctl</em>. 
+In case of desktop configuration, we should just go to the preferences and choose the Raspberry Pi configuration dialog. The next step is to go to the interfaces and click the ssh <em>enabled</em>, if it was not enabled before.</p>
+<p>For terminal configuration we use well-known command:</p>
 <pre><code class="language-bash">$ sudo raspi config
 </code></pre>
-<p>Scroll up and down using tab-key and arrows, navigate <em>SSH</em> then <em>YES</em>, then <em>OK</em> then 
-click <em>Finish</em>.</p>
-<h2 id="configuration-using-desktop">Configuration using desktop:</h2>
-<p>Go to menu <em>Preferences</em>, choosing <em>Raspberry Pi configuration</em>. Then the corresponding GUI opens with setting options, you should select SSH via interface options and release the corresponding option.</p>
-<p><img alt="Raspberry Pi Configuration Tool" src="../img/chalkbot_raspi/2022-06-18_21-03-52.png" />
-<em>Images were taken from <a href="https://www.raspberrypi.org/">www.raspberrypi.org</a></em></p>
-<h2 id="configuration-using-systemctl">Configuration using systemctl:</h2>
+<p>Then choose the <em>Interfacing Options</em> on the dialog, subsequently navigating to the <em>SSH</em> and choosing OK. </p>
+<p>The last but not least was the SSH service <em>systemctl</em></p>
 <pre><code class="language-bash">$ sudo systemctl enable ssh
 </code></pre>
 <pre><code class="language-bash">$ sudo systemctl start ssh
 </code></pre>
-<div class="admonition note annotate">
-<p class="admonition-title">IP-address of Rapsberry Pi</p>
-<p>You'll need to write down your Raspberry Pi's IP address to connect to it later. The ifconfig command displays information about the current network status, including the IP address, or you can use hostname -I to display the IP addresses associated with the device.</p>
-</div>
-<p>For connection with the <em>Raspberry Pi</em> you need to type in the following:</p>
-<pre><code class="language-bash">$ sudo pi@&lt;IP&gt;
+<p>For headless Raspberry Pi we have also a solution: so we need to adjust the
+SSH file in Boot Partiotion of SD-Card, place the <em>username</em> &amp; <em>password</em>. This procedure enables the SSH per default.
+After enabling the SSH we need to establish the connection, but previously we need get also the ip-address of our Raspberry Pi. For the further connection we need just to type this command in the terminal:</p>
+<pre><code class="language-bash">$ ssh pi@&lt;IP&gt;
 </code></pre>
-<h1 id="wifi-connection">WiFi Connection</h1>
-<p>The tool <em>raspi-config</em> is being used also for the configuration of the wireless network to various parts of the boot, login, and networking process, as well as some other system-level changes. Wireless LAN connection is also turned on via this application as well as SSH.
-The one can also configure country-specific WLAN connection via WLAN Country if it's needed.</p>
-<h1 id="vnc-on-raspberry-pi">VNC on Raspberry Pi</h1>
-<p>In case someone likes to work on Raspberry Pi from another device by remote control, or when it is not convenient to work directly on it, VNC could solve this use case. VNC is a graphical desktop sharing system for remotely controlling one computer's desktop interface (VNC server) from another computer or mobile device (VNC viewer).</p>
-<p>We can use RealVNC on Raspberry Pi OS, which has both VNC Server and VNC Viewer. VNC Server must be enabled before usage. In some cases, if the Raspberry Pi is headless, VNC allows us to get the GUI-access to it.</p>
-<p>For VNC configuration we need:
-Enable VNC server on command line with raspi-config:</p>
-<pre><code class="language-bash">$ sudo raspi config
-</code></pre>
-<p>VNC Server → Interfaces → VNC → Yes
-There are two ways to connect to your Raspberry Pi. You can use one or both depending on what works best for you.
-Establishment of a direct connection or a cloud connection.</p>
-<h3 id="direct-connection">Direct Connection</h3>
-<p>In case of the direct connection, we should get the IP address of the
-Raspberry Pi.Download VNC Viewer on the device you are using to take control.
-For best results, use RealVNC's compatible app. Enter the private IP address
-of your Raspberry Pi into VNC Viewer.</p>
-<h3 id="cloud-connection">Cloud Connection</h3>
-<p>Sign up for a RealVNC account here:
-<a href="https://manage.realvnc.com/en/">link</a>.
-It's free and only takes a few seconds.
-On the Raspberry Pi, user must log in to VNC Server with the new RealVNC account credentials. Subsequently user must download VNC Viewer on the device you are using to take control. </p>
-<p>There must be RealVNC's compatible app. Then just sign in to VNC Viewer using the same RealVNC account credentials, afterwards either tap or click to connect to the Raspberry Pi. In both casesfor establishing either a direct or cloud connection, user must authenticate with VNC Server.</p>
+<p>Instead of <em>IP</em> we need to put out ip-address of the Raspberry Pi. You are now remotely connected to the Raspberry Pi and can execute commands.</p>
+<h3 id="git">Git</h3>
+<p>As in every project nowadays we used the version control system based on git-
+tool and came across some permission error, that didn't let us push the 
+changes from current files to the remote one. There was also some error
+message we received:</p>
+<p><img alt="Error Message Git" src="../img/chalkbot_raspi/giterror.png" /></p>
+<p><img alt="Error Message Git" src="../img/chalkbot_raspi/errorgit.png" /></p>
+<p>The solution was revealed after some help from the team leader and that was associated with Windows Credential Manager, where some pre-configured settings blocked the push to the remote repository. After deleting these settings everything worked.</p>
+<p><img alt="Error Message Git" src="../img/chalkbot_raspi/credentialmanager.png" /></p>
+<h3 id="wifi-issues">WiFi Issues</h3>
+<p>There was also some problem with Raspberry Pi Zero WiFi, it was exceptionally poor when the device was moved. The problem had also the backdraw of using HTTP to communicate with ESP. Even if TCP connection is reused, one request takes 7 TCP packets, which means 70 packets per second. </p>
+<p>However, on the ChalkBot with the ESP, the connection seems quite stable, but should be best replaced with a wired connection.</p>
+<p>We have investigated this particular isuue in a detailed manner and for that purpose we've measure the transfer rate between the Rasperry Pi and the computer.</p>
+<p><img alt="Error Message Git" src="../img/chalkbot_raspi/transferrate.png" /></p>
+<p>Interval is 0.1 s, so a total of 10 seconds, so the one can observe clearly to see where the Raspberry Pi is moving.</p>
+<h2 id="outlook">Outlook</h2>
+<ul>
+<li>Switching ESP HTTP Server to support subsequently persistent connection</li>
+<li>Change communication protocol</li>
+<li>Avoid TCP connection, as there is too much overhead and FlowControl is undesirable (UDP e.g)</li>
+<li>This automatically eliminates HTTP</li>
+<li>Change config on the fly</li>
+</ul>
 
               
             </article>

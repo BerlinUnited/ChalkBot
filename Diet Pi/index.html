@@ -13,7 +13,7 @@
     
     
       
-        <title>Raspberry Pi configuration - ChalkBot - Documentation</title>
+        <title>Diet Pi - ChalkBot - Documentation</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#configuration-raspberry-pi" class="md-skip">
+        <a href="#diet-pi" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Raspberry Pi configuration
+              Diet Pi
             
           </span>
         </div>
@@ -466,6 +466,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../Raspberry%20Pi%20configuration/" class="md-nav__link">
+        Raspberry Pi configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -477,24 +491,54 @@
         
       
       
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Raspberry Pi configuration
-      </a>
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Diet Pi
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Diet%20Pi/" class="md-nav__link">
+      <a href="./" class="md-nav__link md-nav__link--active">
         Diet Pi
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#benefits" class="md-nav__link">
+    Benefits
+  </a>
+  
+    <nav class="md-nav" aria-label="Benefits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation-of-dietpi-os" class="md-nav__link">
+    Installation of DietPi OS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -554,6 +598,34 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#benefits" class="md-nav__link">
+    Benefits
+  </a>
+  
+    <nav class="md-nav" aria-label="Benefits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation-of-dietpi-os" class="md-nav__link">
+    Installation of DietPi OS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -566,54 +638,27 @@
                 
 
 
-<h1 id="configuration-raspberry-pi">Configuration Raspberry Pi</h1>
-<h1 id="ssh-connection">SSH Connection</h1>
-<h2 id="configuration-using-command-line">Configuration using command line:</h2>
-<p>To open the configuration tool on a Raspberry Pi, enter the following command line in the command prompt:</p>
-<pre><code class="language-bash">$ sudo raspi config
-</code></pre>
-<p>Scroll up and down using tab-key and arrows, navigate <em>SSH</em> then <em>YES</em>, then <em>OK</em> then 
-click <em>Finish</em>.</p>
-<h2 id="configuration-using-desktop">Configuration using desktop:</h2>
-<p>Go to menu <em>Preferences</em>, choosing <em>Raspberry Pi configuration</em>. Then the corresponding GUI opens with setting options, you should select SSH via interface options and release the corresponding option.</p>
-<p><img alt="Raspberry Pi Configuration Tool" src="../img/chalkbot_raspi/2022-06-18_21-03-52.png" />
-<em>Images were taken from <a href="https://www.raspberrypi.org/">www.raspberrypi.org</a></em></p>
-<h2 id="configuration-using-systemctl">Configuration using systemctl:</h2>
-<pre><code class="language-bash">$ sudo systemctl enable ssh
-</code></pre>
-<pre><code class="language-bash">$ sudo systemctl start ssh
-</code></pre>
-<div class="admonition note annotate">
-<p class="admonition-title">IP-address of Rapsberry Pi</p>
-<p>You'll need to write down your Raspberry Pi's IP address to connect to it later. The ifconfig command displays information about the current network status, including the IP address, or you can use hostname -I to display the IP addresses associated with the device.</p>
-</div>
-<p>For connection with the <em>Raspberry Pi</em> you need to type in the following:</p>
-<pre><code class="language-bash">$ sudo pi@&lt;IP&gt;
-</code></pre>
-<h1 id="wifi-connection">WiFi Connection</h1>
-<p>The tool <em>raspi-config</em> is being used also for the configuration of the wireless network to various parts of the boot, login, and networking process, as well as some other system-level changes. Wireless LAN connection is also turned on via this application as well as SSH.
-The one can also configure country-specific WLAN connection via WLAN Country if it's needed.</p>
-<h1 id="vnc-on-raspberry-pi">VNC on Raspberry Pi</h1>
-<p>In case someone likes to work on Raspberry Pi from another device by remote control, or when it is not convenient to work directly on it, VNC could solve this use case. VNC is a graphical desktop sharing system for remotely controlling one computer's desktop interface (VNC server) from another computer or mobile device (VNC viewer).</p>
-<p>We can use RealVNC on Raspberry Pi OS, which has both VNC Server and VNC Viewer. VNC Server must be enabled before usage. In some cases, if the Raspberry Pi is headless, VNC allows us to get the GUI-access to it.</p>
-<p>For VNC configuration we need:
-Enable VNC server on command line with raspi-config:</p>
-<pre><code class="language-bash">$ sudo raspi config
-</code></pre>
-<p>VNC Server → Interfaces → VNC → Yes
-There are two ways to connect to your Raspberry Pi. You can use one or both depending on what works best for you.
-Establishment of a direct connection or a cloud connection.</p>
-<h3 id="direct-connection">Direct Connection</h3>
-<p>In case of the direct connection, we should get the IP address of the
-Raspberry Pi.Download VNC Viewer on the device you are using to take control.
-For best results, use RealVNC's compatible app. Enter the private IP address
-of your Raspberry Pi into VNC Viewer.</p>
-<h3 id="cloud-connection">Cloud Connection</h3>
-<p>Sign up for a RealVNC account here:
-<a href="https://manage.realvnc.com/en/">link</a>.
-It's free and only takes a few seconds.
-On the Raspberry Pi, user must log in to VNC Server with the new RealVNC account credentials. Subsequently user must download VNC Viewer on the device you are using to take control. </p>
-<p>There must be RealVNC's compatible app. Then just sign in to VNC Viewer using the same RealVNC account credentials, afterwards either tap or click to connect to the Raspberry Pi. In both casesfor establishing either a direct or cloud connection, user must authenticate with VNC Server.</p>
+<h1 id="diet-pi">Diet Pi</h1>
+<h2 id="benefits">Benefits</h2>
+<p>In the process of work, we came across another version of the operating system, which could facilitate the process of developing our application in a fairly detailed form. We present to your attention the operating system Diet Pi, which has a number of advantages over Raspberry Pi. 
+It is an extremely lightweight Debian OS, highly optimised for minimal CPU and RAM resource usage, ensuring your SBC always runs at its maximum potential.</p>
+<p>There several benefits of using Diet Pi:</p>
+<ul>
+<li>Minimalist Linux distribution for single-board computers</li>
+<li>As few packages as possible → fast startup</li>
+<li>Comes without a GUI by default</li>
+<li>Install desired software on first boot</li>
+<li>Simple operation via SSH</li>
+<li>SSH works out of the box</li>
+<li>Smaller RAM consumption than Raspberry Pi OS</li>
+</ul>
+<p>Above all, users can quickly and easily backup or restore their DietPi system.
+Using the DietPi-Services Control, user can control which installed software has higher or lower priority levels: nice, affinity, policy scheduler and more. Within the DietPi-Automation the user can completely automate a DietPi installation with no user input. Simply by configuring <strong><em>dietpi.txt</em></strong> before powering on.</p>
+<p>Welcome screen after the connection over SSH: 
+<img alt="Welcome Screen Diet Pi v8.6.1" src="../img/chalkbot_raspi/DietPiWelcomeScreen.png" /></p>
+<p>It takes 25s approximately for booting of the DietPi, which is more quick than the result of the RaspberryPi with 40s.</p>
+<h3 id="installation-of-dietpi-os">Installation of DietPi OS</h3>
+<p>Please download the DietPi OS using the following <a href="https://dietpi.com/">link</a>.</p>
 
               
             </article>

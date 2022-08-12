@@ -472,6 +472,48 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Diet%20Pi/" class="md-nav__link">
+        Diet Pi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Gamepad%20Input%20Script/" class="md-nav__link">
+        Gamepad Input Script
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Problems%20%26%20Solving/" class="md-nav__link">
+        Problems & Solving
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -544,7 +586,7 @@
 <h2 id="the-arduino-sketch">The Arduino Sketch</h2>
 <p>The Arduino sketch allows the Arduino to read the inputs that the PS2 Controller receives. The sketch uses the Arduino PS2 Library - PS2X_lib. The inputs of the PS2 Controller received serially by the Arduino, can be observed from the Serial Monitor of Arduino IDE, since our sketch instructs Arduino to print lines according to the inputs.</p>
 <h2 id="the-python-program">The Python Program</h2>
-<p>The python portion of the PS2 Controls is currently a part of the already previously existing python program - <em>chalkbot_cmd</em>. The commandline keyword to call it up is aptly named - <em>ps2controls</em>.</p>
+<p>The python program "ps2_control.py" responsible for receiving the input and sending it to the Chalkbot itself, or the simulator.</p>
 <p>The serial library is imported, since it allows us to receive serial input. The serial instance - <em>serialInst</em> stores the serial data. This data is later read line by line as a part of the while loop.</p>
 <p>D-pad buttons <em>up</em> and <em>down</em> are responsible for <em>forward</em> and <em>backward</em> <em>acceleration</em> respectively. D-pad buttons <em>left</em> and <em>right</em> are responsible for <em>left</em> and <em>right</em> <em>rotation</em> of the Chalkbot. Currently, the program uses the drive() function of the robot to perform these actions.</p>
 <p>Actions initiated by pressing the D-pad buttons are done at the PWM determined by the pwm variable which is 50 initially. This value can be <em>increased</em> and <em>decreased</em> with the use of <em>R2</em> and <em>L2</em> buttons respectively.</p>

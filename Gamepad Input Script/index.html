@@ -13,7 +13,7 @@
     
     
       
-        <title>Raspberry Pi configuration - ChalkBot - Documentation</title>
+        <title>Gamepad Input Script - ChalkBot - Documentation</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#configuration-raspberry-pi" class="md-skip">
+        <a href="#gamepad-input-script" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Raspberry Pi configuration
+              Gamepad Input Script
             
           </span>
         </div>
@@ -466,21 +466,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Raspberry%20Pi%20configuration/" class="md-nav__link">
         Raspberry Pi configuration
       </a>
-      
     </li>
   
 
@@ -504,11 +494,99 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../Gamepad%20Input%20Script/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Gamepad Input Script
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Gamepad Input Script
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inputs-python-library" class="md-nav__link">
+    Inputs Python Library
+  </a>
+  
+    <nav class="md-nav" aria-label="Inputs Python Library">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    Implementation
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#program-flow-plan" class="md-nav__link">
+    Program flow plan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#core-behavior" class="md-nav__link">
+    Core behavior
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#systemd-autostart" class="md-nav__link">
+    Systemd / Autostart
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -554,6 +632,68 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inputs-python-library" class="md-nav__link">
+    Inputs Python Library
+  </a>
+  
+    <nav class="md-nav" aria-label="Inputs Python Library">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    Implementation
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#program-flow-plan" class="md-nav__link">
+    Program flow plan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#core-behavior" class="md-nav__link">
+    Core behavior
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#systemd-autostart" class="md-nav__link">
+    Systemd / Autostart
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -566,54 +706,76 @@
                 
 
 
-<h1 id="configuration-raspberry-pi">Configuration Raspberry Pi</h1>
-<h1 id="ssh-connection">SSH Connection</h1>
-<h2 id="configuration-using-command-line">Configuration using command line:</h2>
-<p>To open the configuration tool on a Raspberry Pi, enter the following command line in the command prompt:</p>
-<pre><code class="language-bash">$ sudo raspi config
+<h1 id="gamepad-input-script">Gamepad Input Script</h1>
+<h2 id="inputs-python-library">Inputs Python Library</h2>
+<p>As a basis for developing our application, we use the <strong><em>Inputs Python Library</em></strong>. The reason was the incredible flexibility and wide range of possibilities of this resource and a good feedback about the work from the community. All necessary information about the library can be pulled out of the following pages:</p>
+<ul>
+<li>
+<p><a href="https://github.com/zeth/inputs">github/inputs</a></p>
+</li>
+<li>
+<p><a href="https://inputs.readthedocs.io/en/latest/">zeth/inputs</a></p>
+</li>
+</ul>
+<p>There are several reasons for using exactly this library:</p>
+<ul>
+<li>The Inputs module provides Python programs with an easy way to listen for user input.</li>
+<li>Currently supported platforms are Linux (including Raspberry Pi and Chromebooks in developer mode), Windows and the Apple Mac.</li>
+<li>Supported Python versions are all versions of Python 3 and Python 2.7</li>
+<li>Inputs is in pure Python and there are no Raspberry Pi, Linux or Windows dependencies.</li>
+</ul>
+<p>It is also very useful when the device needs to run a particular application in full screen mode, but you would like to listen in the background for a certain set of user data, e.g. to bring up the admin panel in digital signage settings. But the most suffcient feature of the Iputs module is taht it is cross-platform, so it doesn't matter which you use, the event data will be normalized and your program will work the same on the other operating system.</p>
+<p><img alt="Gamepad with Dongle" src="../img/chalkbot_raspi/gamepaddongle.jpeg" /></p>
+<h3 id="installation">Installation</h3>
+<pre><code class="language-bash">$ pip install inputs
 </code></pre>
-<p>Scroll up and down using tab-key and arrows, navigate <em>SSH</em> then <em>YES</em>, then <em>OK</em> then 
-click <em>Finish</em>.</p>
-<h2 id="configuration-using-desktop">Configuration using desktop:</h2>
-<p>Go to menu <em>Preferences</em>, choosing <em>Raspberry Pi configuration</em>. Then the corresponding GUI opens with setting options, you should select SSH via interface options and release the corresponding option.</p>
-<p><img alt="Raspberry Pi Configuration Tool" src="../img/chalkbot_raspi/2022-06-18_21-03-52.png" />
-<em>Images were taken from <a href="https://www.raspberrypi.org/">www.raspberrypi.org</a></em></p>
-<h2 id="configuration-using-systemctl">Configuration using systemctl:</h2>
-<pre><code class="language-bash">$ sudo systemctl enable ssh
+<p>or directly from source</p>
+<pre><code class="language-bash">$ git clone https://github.com/zeth/inputs.git
+$ cd inputs
+$ python setup.py install
 </code></pre>
-<pre><code class="language-bash">$ sudo systemctl start ssh
-</code></pre>
-<div class="admonition note annotate">
-<p class="admonition-title">IP-address of Rapsberry Pi</p>
-<p>You'll need to write down your Raspberry Pi's IP address to connect to it later. The ifconfig command displays information about the current network status, including the IP address, or you can use hostname -I to display the IP addresses associated with the device.</p>
-</div>
-<p>For connection with the <em>Raspberry Pi</em> you need to type in the following:</p>
-<pre><code class="language-bash">$ sudo pi@&lt;IP&gt;
-</code></pre>
-<h1 id="wifi-connection">WiFi Connection</h1>
-<p>The tool <em>raspi-config</em> is being used also for the configuration of the wireless network to various parts of the boot, login, and networking process, as well as some other system-level changes. Wireless LAN connection is also turned on via this application as well as SSH.
-The one can also configure country-specific WLAN connection via WLAN Country if it's needed.</p>
-<h1 id="vnc-on-raspberry-pi">VNC on Raspberry Pi</h1>
-<p>In case someone likes to work on Raspberry Pi from another device by remote control, or when it is not convenient to work directly on it, VNC could solve this use case. VNC is a graphical desktop sharing system for remotely controlling one computer's desktop interface (VNC server) from another computer or mobile device (VNC viewer).</p>
-<p>We can use RealVNC on Raspberry Pi OS, which has both VNC Server and VNC Viewer. VNC Server must be enabled before usage. In some cases, if the Raspberry Pi is headless, VNC allows us to get the GUI-access to it.</p>
-<p>For VNC configuration we need:
-Enable VNC server on command line with raspi-config:</p>
-<pre><code class="language-bash">$ sudo raspi config
-</code></pre>
-<p>VNC Server → Interfaces → VNC → Yes
-There are two ways to connect to your Raspberry Pi. You can use one or both depending on what works best for you.
-Establishment of a direct connection or a cloud connection.</p>
-<h3 id="direct-connection">Direct Connection</h3>
-<p>In case of the direct connection, we should get the IP address of the
-Raspberry Pi.Download VNC Viewer on the device you are using to take control.
-For best results, use RealVNC's compatible app. Enter the private IP address
-of your Raspberry Pi into VNC Viewer.</p>
-<h3 id="cloud-connection">Cloud Connection</h3>
-<p>Sign up for a RealVNC account here:
-<a href="https://manage.realvnc.com/en/">link</a>.
-It's free and only takes a few seconds.
-On the Raspberry Pi, user must log in to VNC Server with the new RealVNC account credentials. Subsequently user must download VNC Viewer on the device you are using to take control. </p>
-<p>There must be RealVNC's compatible app. Then just sign in to VNC Viewer using the same RealVNC account credentials, afterwards either tap or click to connect to the Raspberry Pi. In both casesfor establishing either a direct or cloud connection, user must authenticate with VNC Server.</p>
+<p>As a concept of connecting the Gamepad controller with the Raspberry Pi within the ChalkBot Framework we used the following architecture:</p>
+<p><img alt="Architecture" src="../img/chalkbot_raspi/architecture.jpg" /></p>
+<p>We observe the connection with the USB Gamepad Dongle via wireless connection, the default requierement is to have the dongle preliminarily on the device. Te commands are being sent from the Raspberry Pi using wireless connection to the ESP-Module. </p>
+<h2 id="implementation">Implementation</h2>
+<ul>
+<li>Written in Python</li>
+<li>Uses the ChalkBot Library</li>
+<li>2 threads  (<em>Gamepad thread</em> &amp; <em>Network Communication Thread</em>)</li>
+<li>Configuration via Config File and Command Line possible</li>
+<li>Logging with different levels in file</li>
+</ul>
+<p>Gamepad thread
+The reason we implemented multiple threads had several benefits as it is listed below:</p>
+<ul>
+<li>Support for any controller, one mapping per controller</li>
+<li>Support for multiple control schemes
+– What happens if there are conflicting inputs?</li>
+<li>So e.g. forwards and backwards at the same time</li>
+<li>Maximum value is used
+– Inputs Library does not support hotplug, i.e. USB dongle must be used with
+program start</li>
+</ul>
+<p><em>Network Communication Thread</em> sends the current Drive Instructions to the ChalkBot every 100 ms with the ChalkBot Library.
+<em>Error handling</em> reacts differently in various cases: </p>
+<ul>
+<li>if a thread has an exception, sends exit event</li>
+<li>it also ends the other thread, if it can</li>
+<li>if it doesn't, it will be forced to quit</li>
+</ul>
+<h3 id="program-flow-plan">Program flow plan</h3>
+<p>Flowing charts depicts the threading and decion making of the module by creating the associated object and sending instruction for the event. Handling of exceptions are also part of the default workflow.</p>
+<p><img alt="PAP" src="../img/chalkbot_raspi/programmablauf.png" /></p>
+<h3 id="core-behavior">Core behavior</h3>
+<p>Here under we observe the typical functional behavior of the implementation:</p>
+<p><img alt="Core behavior" src="../img/chalkbot_raspi/kernverhalten.png" /></p>
+<h2 id="systemd-autostart">Systemd / Autostart</h2>
+<p><img alt="systemd_1" src="../img/chalkbot_raspi/systemd.jpg" /></p>
+<p><em>Image was taken from <a href="https://systemd.io/">www.systemd.io</a></em></p>
+<p><em>Systemd</em> is a tool of basic building blocks for a Linux system. It provides a system and service manager that runs as PID 1 and starts the rest of the system. Systemd provides parallelization, uses socket and D-Bus activation for starting services, offers on-demand starting of daemons, keeps track of processes using Linux control groups, maintains mount and automount points, and implements an elaborate transactional dependency-based service control logic. systemd supports SysV and LSB init scripts and works as a replacement for sysvinit, starts first program running at boot, manages programs via services, it is actually the init process, i.e. PID 1,of a Linux system.</p>
+<p><img alt="systemd_2" src="../img/chalkbot_raspi/systemd_tree.png" /></p>
+<p>After starting and running the application the system reads the services written in the unit file of the program. The script takes configuration from config file (/etc/default/chalkbot/gamepad_controller.conf).</p>
+<p><img alt="systemd_3" src="../img/chalkbot_raspi/systemd_autostart.png" /></p>
 
               
             </article>
