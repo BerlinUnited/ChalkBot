@@ -2,35 +2,35 @@ In this documentation of my work on the ChalkBot software, I want to introduce h
 
 Since both servers are written in Python, you need to have python installed to use them. You also need to install three packages with the following command in both directories:
 
-![Requirements for canvas](img/canvasSimulation/requirementsCanvas)
-![Requirements for simulation](img/canvasSimulation/requirementsSimulation)
+![Requirements for canvas](canvasSimulation/requirementsCanvas.png)
+![Requirements for simulation](canvasSimulation/requirementsSimulation.png)
 
 Now you are ready to start both servers by using 
 
-![Start canvas](img/canvasSimulation/startCanvas)
+![Start canvas](canvasSimulation/startCanvas.png)
 
 in the canvas directory and
 
-![Start simulation](img/canvasSimulation/startSimulation)
+![Start simulation](canvasSimulation/startSimulation.png)
 
 in the Simulation directory.
 
 Both servers now run on your local device and can be reached with your browser at 
 127.0.0.1:8800 for the canvas and 127.0.0.1:8080 for the simulation. It should look like this:
 
-![Start canvas in browser](img/canvasSimulation/startCanvasBrowser) ![Start simulation in browser](img/canvasSimulation/startSimulationBrowser)	
+![Start canvas in browser](canvasSimulation/startCanvasBrowser.png) ![Start simulation in browser](canvasSimulation/startSimulationBrowser.png)	
 
 Now let's get to the functions of canvas. You can draw a line or multiple lines using your mouse inside the red rectangle. 
 
-![Lines in canvas](img/canvasSimulation/drawingCanvas)	
+![Lines in canvas](canvasSimulation/drawingCanvas.png)	
 
 When you hit “SEND”, the information is sent to the simulator and ChalkBot will print your drawn line.
 
-![Simulation from canvas](img/canvasSimulation/drawingSimulation)	
+![Simulation from canvas](canvasSimulation/drawingSimulation.png)	
 
 “SIMULATE” simulates ChalkBot in the canvas as a green square.
 
-![Simulation in canvas](img/canvasSimulation/simulateCanvas)
+![Simulation in canvas](canvasSimulation/simulateCanvas.png)
 
 In the case that you want to save your drawing to send it to ChalkBot in the simulation or to the real ChalkBot later, just hit “SAVE TO FILE” and your data is stored in a file in the canvas directory. 
 
@@ -38,7 +38,7 @@ To load that file, you need to choose it on the bottom left. After you hit “Lo
 
 “CLEAR CANVAS” is useful when you want to erase your lines that you drew before and start from scratch.
 
-![Cleared canvas](img/canvasSimulation/clearCanvas)
+![Cleared canvas](canvasSimulation/clearCanvas.png)
 
 The last option is to scale the drawing area to another size by inputting a number and then pressing “Scale”.
 

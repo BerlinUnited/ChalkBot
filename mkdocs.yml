@@ -6,6 +6,7 @@ nav:
     - 'hardware/index.md'
   - Software:
     - 'software/index.md'
+    - 'software/How to use the ChalkBot simulator.md'
   - ChalkBot Team:
     - 'Raspberry Pi.md'
     - 'Raspberry Pi configuration.md'
