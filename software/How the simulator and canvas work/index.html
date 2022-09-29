@@ -14,7 +14,7 @@
     
     
       
-        <title>simulationExplanation - ChalkBot - Documentation</title>
+        <title>How the simulator and canvas work - ChalkBot - Documentation</title>
       
     
     
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              simulationExplanation
+              How the simulator and canvas work
             
           </span>
         </div>
@@ -202,13 +202,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../" class="md-tabs__link">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
         Software
       </a>
     </li>
@@ -370,12 +372,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -415,6 +419,28 @@
       <a href="../How%20to%20use%20the%20ChalkBot%20simulator/" class="md-nav__link">
         How to use the ChalkBot simulator
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        How the simulator and canvas work
+      </a>
+      
     </li>
   
 
@@ -543,9 +569,24 @@
               
                 
                 
-                  <h1>simulationExplanation</h1>
+                  <h1>How the simulator and canvas work</h1>
                 
-                
+                <p>Since we learned how to use the simulator, I want to explain to you how the simulator and canvas work in the background.
+When you draw a line in the drawing area several small blue arrows (as seen in the picture below) are created on that line. </p>
+<p><img alt="Drawing in canvas" src="../canvasSimulation/drawingCanvas.png" /></p>
+<p>The x and y coordinates of these are stored in an array and get sent to the simulator or real life ChalkBot when you hit SEND. ChalkBot will then drive along those points and print the line. Every line you draw in the canvas is scaled by 10 to the real world. If you want to change if the simulator or ChalkBot should receive the coordinates, open CanvasServer.py in the canvas directory and move the hash from one to the other. The scaling is also changeable in this function.</p>
+<p><img alt="Canvas scaling and receiver code" src="../canvasSimulation/canvasScalingCode.png" /></p>
+<p>SAVE TO FILE uses the same array of coordinates and just saves them to a file, the name of the file can be also changed in CanvasServer.py in the do_Post function as seen below.</p>
+<p><img alt="Save to file code" src="../canvasSimulation/saveToFileCode.png" /></p>
+<p>CLEAR CANVAS removes all drawn lines by using the clearRect function by the canvas API, it also resets the array with the coordinates, because they would still be stored in the array otherwise after removing the drawn lines.</p>
+<p><img alt="Clear canvas code" src="../canvasSimulation/clearCanvasCode.png" /></p>
+<p>The scaling of the drawing area is done by the following code.</p>
+<p><img alt="Scale canvas javascript code" src="../canvasSimulation/scaleCanvasCode.png" /></p>
+<p>We just create a second canvas element and just copy all parameters from the previous canvas and then scale the height and width by the given value. The scale by button is implemented like this:</p>
+<p><img alt="Scale canvas html code" src="../canvasSimulation/scaleCanvasHTML.png" /></p>
+<p>To load the saved file, we need to filter out the coordinates, that's done with the following code that removes all characters that are not important to draw the saved lines. </p>
+<p><img alt="Load file code" src="../canvasSimulation/loadFileCode.png" /></p>
+<p>Now the coordinates are just sent to the simulator in the same way they would have been if you drew the line in the drawing area.</p>
                 
               
               
