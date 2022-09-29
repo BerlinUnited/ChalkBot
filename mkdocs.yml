@@ -7,6 +7,8 @@ nav:
   - Software:
     - 'software/index.md'
     - 'software/How to use the ChalkBot simulator.md'
+    - 'software/How the simulator and canvas work.md'
+    
   - ChalkBot Team:
     - 'Raspberry Pi.md'
     - 'Raspberry Pi configuration.md'

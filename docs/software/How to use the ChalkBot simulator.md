@@ -32,7 +32,7 @@ When you hit “SEND”, the information is sent to the simulator and ChalkBot w
 
 ![Simulation in canvas](canvasSimulation/simulateCanvas.png)
 
-In the case that you want to save your drawing to send it to ChalkBot in the simulation or to the real ChalkBot later, just hit “SAVE TO FILE” and your data is stored in a file in the canvas directory. 
+In the case that you want to save your drawing to send it to ChalkBot in the simulation or to the real ChalkBot later, just hit “SAVE TO FILE” and your data is stored in a file called "coords.json" in the canvas directory. 
 
 To load that file, you need to choose it on the bottom left. After you hit “Load” your data is sent to the simulator.
 
