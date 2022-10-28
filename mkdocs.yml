@@ -7,16 +7,16 @@ nav:
   - Software:
     - 'software/index.md'
     - Canvas Simulation:
-      - 'software/simulation/How to use the ChalkBot simulator.md'
-      - 'software/simulation/How the simulator and canvas work.md'
+      - How to use the ChalkBot Simulator: 'software/simulation/simulator-usage.md'
+      - How the simulator and canvas work: 'software/simulation/canvas-simulator.md'
     - Gyro Steuerung:
-      - 'software/gyro/Gyro-Control.md'
+      - Gyro Control: 'software/gyro/gyro-control.md'
     - Raspberry Pi:
-      - 'software/raspberry-pi/Raspberry Pi.md'
-      - 'software/raspberry-pi/Raspberry Pi configuration.md'
-      - 'software/raspberry-pi/Diet Pi.md'
-      - 'software/raspberry-pi/Gamepad Input Script.md'
-      - 'software/raspberry-pi/Problems & Solving.md'
+      - Rasoberry Pi Set Up: 'software/raspberry-pi/raspberry-pi.md'
+      - Raspberry Pi Configuration: 'software/raspberry-pi/raspberry-pi-configuration.md'
+      - Diet Pi: 'software/raspberry-pi/diet-pi.md'
+      - Gamepad Input Script: 'software/raspberry-pi/gamepad-input-script.md'
+      - Problems and Solutions: 'software/raspberry-pi/problems-solving.md'
     
 theme:
   name: material
