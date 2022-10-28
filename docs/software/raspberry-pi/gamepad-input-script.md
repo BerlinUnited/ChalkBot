@@ -92,8 +92,23 @@ Here under we observe the typical functional behavior of the implementation:
 ![systemd_2](../../img/chalkbot-raspi/systemd_tree.png)
 
 
-After starting and running the application the system reads the services written in the unit file of the program. The script takes configuration from config file (/etc/default/chalkbot/gamepad_controller.conf).
+After starting and running the application the system reads the services written in the unit file of the program. The script takes configuration from config file (`/etc/default/chalkbot/gamepad_controller.conf`). The following file is located at `/etc/systemd/system/gamepad_controller_input.services`
 
-![systemd_3](../../img/chalkbot-raspi/systemd_autostart.png)
+```bash
+[Unit]
+Description=Provides the ability to control the robot with an USB Gamepad
+After=network-online.target
+Wants=network-online.target
+
+[Services]
+Type=simple
+ExecStart=/usr/bin/python3 /usr/local/bin/gamepad_controller_input.py
+
+Restart=always
+RestartSec=1s
+
+[Install]
+WantedBy=multi-user.target
+```
 
 
