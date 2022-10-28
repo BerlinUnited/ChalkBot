@@ -53,15 +53,15 @@ changes from current files to the remote one. There was also some error
 message we received:
 
 
-![Error Message Git](img/chalkbot_raspi/giterror.png)
+![Error Message Git](../../img/chalkbot-raspi/giterror.png)
 
 
-![Error Message Git](img/chalkbot_raspi/errorgit.png)
+![Error Message Git](../../img/chalkbot-raspi/errorgit.png)
 
 
 The solution was revealed after some help from the team leader and that was associated with Windows Credential Manager, where some pre-configured settings blocked the push to the remote repository. After deleting these settings everything worked.
 
-![Error Message Git](img/chalkbot_raspi/credentialmanager.png)
+![Error Message Git](../../img/chalkbot-raspi/credentialmanager.png)
 
 
 
@@ -73,7 +73,7 @@ However, on the ChalkBot with the ESP, the connection seems quite stable, but sh
 
 We have investigated this particular isuue in a detailed manner and for that purpose we've measure the transfer rate between the Rasperry Pi and the computer.
 
-![Error Message Git](img/chalkbot_raspi/transferrate.png)
+![Error Message Git](../../img/chalkbot-raspi/transferrate.png)
 
 
 Interval is 0.1 s, so a total of 10 seconds, so the one can observe clearly to see where the Raspberry Pi is moving.

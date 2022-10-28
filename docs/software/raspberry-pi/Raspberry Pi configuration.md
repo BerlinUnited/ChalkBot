@@ -17,7 +17,7 @@ click *Finish*.
 
 Go to menu *Preferences*, choosing *Raspberry Pi configuration*. Then the corresponding GUI opens with setting options, you should select SSH via interface options and release the corresponding option.
 
-![Raspberry Pi Configuration Tool](img/chalkbot_raspi/2022-06-18_21-03-52.png)
+![Raspberry Pi Configuration Tool](../../img/chalkbot-raspi/2022-06-18_21-03-52.png)
 *Images were taken from [www.raspberrypi.org](https://www.raspberrypi.org/)*
 
 ## Configuration using systemctl:

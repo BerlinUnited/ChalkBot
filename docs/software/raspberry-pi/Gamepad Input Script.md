@@ -19,7 +19,7 @@ There are several reasons for using exactly this library:
 It is also very useful when the device needs to run a particular application in full screen mode, but you would like to listen in the background for a certain set of user data, e.g. to bring up the admin panel in digital signage settings. But the most suffcient feature of the Iputs module is taht it is cross-platform, so it doesn't matter which you use, the event data will be normalized and your program will work the same on the other operating system.
 
 
-![Gamepad with Dongle](img/chalkbot_raspi/gamepaddongle.jpeg)
+![Gamepad with Dongle](../../img/chalkbot-raspi/gamepaddongle.jpeg)
 
 ### Installation
 
@@ -38,7 +38,7 @@ $ python setup.py install
 
 As a concept of connecting the Gamepad controller with the Raspberry Pi within the ChalkBot Framework we used the following architecture:
 
-![Architecture](img/chalkbot_raspi/architecture.jpg)
+![Architecture](../../img/chalkbot-raspi/architecture.jpg)
 
 We observe the connection with the USB Gamepad Dongle via wireless connection, the default requierement is to have the dongle preliminarily on the device. Te commands are being sent from the Raspberry Pi using wireless connection to the ESP-Module. 
 
@@ -72,28 +72,28 @@ program start
 
 Flowing charts depicts the threading and decion making of the module by creating the associated object and sending instruction for the event. Handling of exceptions are also part of the default workflow.
 
-![PAP](img/chalkbot_raspi/programmablauf.png)
+![PAP](../../img/chalkbot-raspi/programmablauf.png)
 
 
 ### Core behavior 
 
 Here under we observe the typical functional behavior of the implementation:
 
-![Core behavior](img/chalkbot_raspi/kernverhalten.png)
+![Core behavior](../../img/chalkbot-raspi/kernverhalten.png)
 
 ## Systemd / Autostart
 
-![systemd_1](img/chalkbot_raspi/systemd.jpg)
+![systemd_1](../../img/chalkbot-raspi/systemd.jpg)
 
 *Image was taken from [www.systemd.io](https://systemd.io/)*
 
 *Systemd* is a tool of basic building blocks for a Linux system. It provides a system and service manager that runs as PID 1 and starts the rest of the system. Systemd provides parallelization, uses socket and D-Bus activation for starting services, offers on-demand starting of daemons, keeps track of processes using Linux control groups, maintains mount and automount points, and implements an elaborate transactional dependency-based service control logic. systemd supports SysV and LSB init scripts and works as a replacement for sysvinit, starts first program running at boot, manages programs via services, it is actually the init process, i.e. PID 1,of a Linux system.
 
-![systemd_2](img/chalkbot_raspi/systemd_tree.png)
+![systemd_2](../../img/chalkbot-raspi/systemd_tree.png)
 
 
 After starting and running the application the system reads the services written in the unit file of the program. The script takes configuration from config file (/etc/default/chalkbot/gamepad_controller.conf).
 
-![systemd_3](img/chalkbot_raspi/systemd_autostart.png)
+![systemd_3](../../img/chalkbot-raspi/systemd_autostart.png)
 
 
