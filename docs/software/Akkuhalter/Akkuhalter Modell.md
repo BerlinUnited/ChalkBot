@@ -7,20 +7,20 @@ To understand how the model has been built from ground and what the components a
 
 Measurement:
 
-![Trying to get the size right](Akkuhalter/Screenshot 2022-11-08 190116.png)
+![Trying to get the size right](Screenshot 2022-11-08 190116.png)
 
 
 There are many ways to achieve this and I tried several, f.e. the option above.
 
 Because it was not precise enough I used a screenshot of a stl model with Vertex-View in Blender:
 
-![Reference Image](Akkuhalter/Screenshot 2022-07-11 121428.png)
+![Reference Image](Screenshot 2022-07-11 121428.png)
 
 I loaded it into Inventor as a Reference-Image for the vertical sketch. I recommend using it. It should now match the real dimensions.
 
 After a lot of try and error i found a solution for constructing the triangle sketch. 
 
-![Triangle Base Construction](Akkuhalter/Bild1.png)
+![Triangle Base Construction](Bild1.png)
 
 The size is determined by the diameter of the circle. The math is: `1/2 * length of sides / cos(30)` but it is coded in a transitive variable so you use the variable for the length of the sides.
 
@@ -46,7 +46,7 @@ Affecting Variables:
     Lochdurchmesser
 
 
-![Vorlage von oben](Akkuhalter/Screenshot 2022-11-08 192517.png)
+![Vorlage von oben](Screenshot 2022-11-08 192517.png)
 
 <br>
 <i>Hauptkörper oben</i>
