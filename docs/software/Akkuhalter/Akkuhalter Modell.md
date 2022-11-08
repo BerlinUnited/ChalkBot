@@ -7,14 +7,14 @@ To understand how the model has been built from ground and what the components a
 
 Measurement:
 
-![Trying to get the size right]("Screenshot 2022-11-08 190116.png")
+![Trying to get the size right](Screenshot1.png)
 
 
 There are many ways to achieve this and I tried several, f.e. the option above.
 
 Because it was not precise enough I used a screenshot of a stl model with Vertex-View in Blender:
 
-![Reference Image](Screenshot 2022-07-11 121428.png)
+![Reference Image](Referenz.png)
 
 I loaded it into Inventor as a Reference-Image for the vertical sketch. I recommend using it. It should now match the real dimensions.
 
@@ -46,7 +46,7 @@ Affecting Variables:
     Lochdurchmesser
 
 
-![Vorlage von oben](Screenshot 2022-11-08 192517.png)
+![Vorlage von oben](Screenshot2.png)
 
 <br>
 <i>Hauptkörper oben</i>
