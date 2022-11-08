@@ -94,7 +94,6 @@ Affecting Variables:
     BefestigungsDicke (not working)
     
 <br>
-<i>
     
 <br>
 <i>Akkuführungslasche boolean x</i>
