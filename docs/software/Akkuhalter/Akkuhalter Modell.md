@@ -7,7 +7,7 @@ To understand how the model has been built from ground and what the components a
 
 Measurement:
 
-![Trying to get the size right](Screenshot 2022-11-08 190116.png)
+![Trying to get the size right]("Screenshot 2022-11-08 190116.png")
 
 
 There are many ways to achieve this and I tried several, f.e. the option above.
