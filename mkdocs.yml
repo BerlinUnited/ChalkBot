@@ -6,16 +6,20 @@ nav:
     - 'hardware/index.md'
   - Software:
     - 'software/index.md'
-    - 'software/How to use the ChalkBot simulator.md'
-    - 'software/How the simulator and canvas work.md'
-    - 'software/Gyro-Control.md'
-    
-  - ChalkBot Team:
-    - 'Raspberry Pi.md'
-    - 'Raspberry Pi configuration.md'
-    - 'Diet Pi.md'
-    - 'Gamepad Input Script.md'
-    - 'Problems & Solving.md'
+    - Canvas Simulation:
+      - How to use the ChalkBot Simulator: 'software/simulation/simulator-usage.md'
+      - How the simulator and canvas work: 'software/simulation/canvas-simulator.md'
+    - Gyro Steuerung:
+      - Gyro Control: 'software/gyro/gyro-control.md'
+    - Raspberry Pi:
+      - Rasoberry Pi Set Up: 'software/raspberry-pi/raspberry-pi.md'
+      - Raspberry Pi Configuration: 'software/raspberry-pi/raspberry-pi-configuration.md'
+      - Diet Pi: 'software/raspberry-pi/diet-pi.md'
+      - Gamepad Input Script: 'software/raspberry-pi/gamepad-input-script.md'
+      - Problems and Solutions: 'software/raspberry-pi/problems-solving.md'
+    - PS2 Gamepad:
+      - PS2 Controls - Software: 'PS2 Controls - Software.md'
+      - PS2 Controls - Hardware: 'PS2 Controls - Hardware.md'
     
 theme:
   name: material

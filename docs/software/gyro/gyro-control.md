@@ -27,5 +27,5 @@ The calculated number represents one instruction set:
 
 Afterwards this value is put in a list which uses the Canvas control format `["Gyro", moveIntention, printing]` and is send to the CanvasServer via HTTPRequest. The CanvasServer identifies based on the keyword *Gyro* if the instruction is such and calls the `sendCommandsToRobot`-function. Based on the instruction given it is then translated into ChalkBot command instructions and send to the ChalkBot.
 
-![DataFlow](gyro/DataFlowGyroController.png)
+![DataFlow](../../img/gyro/DataFlowGyroController.png)
 The image above presents the dataflow in a compact form.

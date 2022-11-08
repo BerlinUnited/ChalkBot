@@ -20,7 +20,7 @@ Above all, users can quickly and easily backup or restore their DietPi system.
 Using the DietPi-Services Control, user can control which installed software has higher or lower priority levels: nice, affinity, policy scheduler and more. Within the DietPi-Automation the user can completely automate a DietPi installation with no user input. Simply by configuring ***dietpi.txt*** before powering on.
 
 Welcome screen after the connection over SSH: 
-![Welcome Screen Diet Pi v8.6.1](img/chalkbot_raspi/DietPiWelcomeScreen.png)
+![Welcome Screen Diet Pi v8.6.1](../../img/chalkbot-raspi/DietPiWelcomeScreen.png)
 
 It takes 25s approximately for booting of the DietPi, which is more quick than the result of the RaspberryPi with 40s.
 
