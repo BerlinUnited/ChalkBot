@@ -1,17 +1,22 @@
 In this documentation of my work on the ChalkBot software, I want to introduce how the simulation server and the canvas server work and also how to use the functions of ChalkBot.
 
-Since both servers are written in Python, you need to have python installed to use them. You also need to install three packages with the following command in both directories:
+Since both servers are written in Python, you need to have python installed to use them. You also need to install three packages with the following command in the canvas and Simulation directory:
 
-![Requirements for canvas](../../img/canvas-simulation/requirementsCanvas.png)
-![Requirements for simulation](../../img/canvas-simulation/requirementsSimulation.png)
+```bash
+$ pip install -r requirements.txt
+```
 
 Now you are ready to start both servers by using 
 
-![Start canvas](../../img/canvas-simulation/startCanvas.png)
+```bash
+$ python .\CanvasServer.py
+```
 
 in the canvas directory and
 
-![Start simulation](../../img/canvas-simulation/startSimulation.png)
+```bash
+$ python .\Simulation.py
+```
 
 in the Simulation directory.
 
