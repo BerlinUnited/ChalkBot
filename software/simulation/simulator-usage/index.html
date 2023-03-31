@@ -698,13 +698,15 @@
                   <h1>How to use the ChalkBot Simulator</h1>
                 
                 <p>In this documentation of my work on the ChalkBot software, I want to introduce how the simulation server and the canvas server work and also how to use the functions of ChalkBot.</p>
-<p>Since both servers are written in Python, you need to have python installed to use them. You also need to install three packages with the following command in both directories:</p>
-<p><img alt="Requirements for canvas" src="../../../img/canvas-simulation/requirementsCanvas.png" />
-<img alt="Requirements for simulation" src="../../../img/canvas-simulation/requirementsSimulation.png" /></p>
+<p>Since both servers are written in Python, you need to have python installed to use them. You also need to install three packages with the following command in the canvas and Simulation directory:</p>
+<pre><code class="language-bash">$ pip install -r requirements.txt
+</code></pre>
 <p>Now you are ready to start both servers by using </p>
-<p><img alt="Start canvas" src="../../../img/canvas-simulation/startCanvas.png" /></p>
+<pre><code class="language-bash">$ python .\CanvasServer.py
+</code></pre>
 <p>in the canvas directory and</p>
-<p><img alt="Start simulation" src="../../../img/canvas-simulation/startSimulation.png" /></p>
+<pre><code class="language-bash">$ python .\Simulation.py
+</code></pre>
 <p>in the Simulation directory.</p>
 <p>Both servers now run on your local device and can be reached with your browser at 
 127.0.0.1:8800 for the canvas and 127.0.0.1:8080 for the simulation. It should look like this:</p>
