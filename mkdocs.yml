@@ -4,6 +4,7 @@ nav:
     - 'index.md'
   - Hardware:
     - 'hardware/index.md'
+    - 'software/Akkuhalter/Akkuhalter Modell.md'
   - Software:
     - 'software/index.md'
     - Canvas Simulation:
