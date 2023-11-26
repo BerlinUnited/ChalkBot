@@ -5,21 +5,21 @@ This information is subject to change, for example, Arduino Mega will eventually
 
 # The controller
 
-![PS2 Controller](./img/ps2-controls/ps2controller.jpg)
+![PS2 Controller](./img/ps2controller.jpg)
 
 This project uses Blue Lake Performance Wireless PS2 Controller. The receiver component can connect to the target device through USB or classic PS2 pins.
 
 ## Controller connection to Arduino Mega
 Jumper wires have been used to connect the pins on PS2 receiver to the Arduino Mega:
 
-![Arduino Mapping](./img/ps2-controls/arduinoMapping.png)
+![Arduino Mapping](./img/arduinoMapping.png)
 
 !!! Warning
-    The receiver is fully powered through Arduino Mega through the corresponding pin, but this will not be possible in the later stages of the project, since Arduino Nano is unable to power up the receiver. An external power supply, such as batteries would have to be incorporated to implement this.</p>
+    The receiver is fully powered through Arduino Mega through the corresponding pin, but this will not be possible in the later stages of the project, since Arduino Nano is unable to power up the receiver. An external power supply, such as batteries would have to be incorporated to implement this.
 
 Below is a visual breakdown of the receiver pins for the PS2 controller:
 
-![PS2 Pins](./img/ps2-controls/ps2pins.png)
+![PS2 Pins](./img/ps2pins.png)
 
 ## Arduino Mega connection to PC
 

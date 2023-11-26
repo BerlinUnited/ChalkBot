@@ -19,8 +19,8 @@ nav:
       - Gamepad Input Script: 'software/raspberry-pi/gamepad-input-script.md'
       - Problems and Solutions: 'software/raspberry-pi/problems-solving.md'
     - PS2 Gamepad:
-      - PS2 Controls - Software: 'PS2 Controls - Software.md'
-      - PS2 Controls - Hardware: 'PS2 Controls - Hardware.md'
+      - Software: 'software/ps2_controls/ps2_controls_software.md'
+      - Hardware: 'software/ps2_controls/ps2_controls_hardware.md'
     
 theme:
   name: material

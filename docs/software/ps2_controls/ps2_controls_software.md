@@ -1,6 +1,10 @@
 ﻿## PS2 controls through Arduino - Software Side
 Below is the documentation of the software side of things. This will get updated as the project moves forward.
 
+## Communication Diagram
+
+![Arduino Mapping](./img/ps2controlDiagram.png)
+
 ## The Arduino Sketch
 
 The Arduino sketch allows the Arduino to read the inputs that the PS2 Controller receives. The sketch uses the Arduino PS2 Library - PS2X_lib. The inputs of the PS2 Controller received serially by the Arduino, can be observed from the Serial Monitor of Arduino IDE, since our sketch instructs Arduino to print lines according to the inputs.
