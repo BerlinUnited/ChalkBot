@@ -1,20 +1,28 @@
-berlinunited.github.io/chalkbot
-===============================
+# berlinunited.github.io/chalkbot
+
 First install the pip dependencies  
-`python -m pip install -r requirements.txt`
+```sh
+python -m pip install -r requirements.txt
+```
 
 ## Local Development
 To run the website locally run:
-`mkdocs serve`
+```sh
+mkdocs serve
+```
 
 ## Deployment
 To deploy the website to github pages run:
-`mkdocs gh-deploy`
+```sh
+mkdocs gh-deploy
+```
 
-This will modify the branch `gh-pages` and push it, which in turn we trigger github to show the new website. Sometimes
-this can take a couple of minutes. Do not change the gh-pages branch manually!
+This will modify the branch `gh-pages` and push it, which in turn we trigger github to show the new website. Sometimes this can take a couple of minutes. 
 
-If you cloned the repo via ssh and use a shh key that is not named id_rsa or is not at the standard location `~/.ssh` you have to specify your settings in a config file inside `~/.ssh`. Otherwise the push of the new changes can't work.
+> [!WARNING]
+> Do not change the gh-pages branch manually!
+
+If you cloned the repo via ssh and use a shh key that is not named id_rsa or is not at the standard location `~/.ssh` you have to specify your settings in a config file inside `~/.ssh`. Otherwise, the push of the new changes can't work.
 ```
 Host github.com
    HostName github.com
